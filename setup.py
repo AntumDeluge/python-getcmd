@@ -45,7 +45,7 @@ PATH_root = Path(PATH_root, os.stat(PATH_root))
 
 FILE_cfg = os.path.join(PATH_root.Path, 'setup.cfg')
 
-list_types = ('scripts', 'py_modules', 'docs',)
+list_types = ('docs', 'platforms', 'py_modules', 'scripts',)
 
 # Utility function to read the README file.
 # Used for the long_description.  It's nice, because now 1) we have a top level
@@ -141,6 +141,7 @@ def RunSetup():
         long_description = ReadConfig('long_description'),
         license = ReadConfig('license'),
         url = ReadConfig('url'),
+        platforms = ReadConfig('platforms'),
         py_modules = ReadConfig('py_modules'),
         keywords = ReadConfig('keywords'),
         classifiers = [
