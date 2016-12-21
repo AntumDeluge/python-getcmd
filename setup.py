@@ -111,9 +111,17 @@ setup_objects = ['build', '{}.egg-info'.format(APP_name), install_log,]
 clean = 'clean' in sys.argv
 distclean = 'distclean' in sys.argv
 
-if clean or distclean:
+# Run regular cleaning with 'distclean' & avoid 'no commands supplied' error
+if distclean and not clean:
+    sys.argv.insert(sys.argv.index('distclean'), 'clean')
+    clean = 'clean' in sys.argv
+
+if clean:
     if distclean:
         setup_objects.append('dist')
+        
+        # Avoid 'invalid command' message
+        sys.argv.pop(sys.argv.index('distclean'))
     
     for O in setup_objects:
         O = os.path.join(PATH_root.Path, O)
@@ -123,10 +131,6 @@ if clean or distclean:
         
         if os.path.isdir(O):
             shutil.rmtree(O)
-    
-    # Avoid 'invalid command' message
-    if distclean:
-        sys.exit(0)
 
 
 def RunSetup():
