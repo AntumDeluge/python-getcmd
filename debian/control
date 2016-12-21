@@ -1,0 +1,37 @@
+Source: python-getcmd
+Section: python
+Priority: optional
+Maintainer: Jordan Irwin <antumdeluge@gmail.com>
+Build-Depends: debhelper (>=9), dh-python, python-pip, python3-pip, python (>=2.7), python3, python-setuptools, python3-setuptools
+Standards-Version: 3.9.7
+Homepage: https://github.com/AntumDeluge/python-getcmd
+X-Python-Version: >= 2.7
+X-Python3-Version: >= 3.2
+Vcs-Git: git://github.com/AntumDeluge/python-getcmd.git
+Vcs-Browser: https://github.com/AntumDeluge/python-getcmd
+
+Package: python-getcmd
+Architecture: all
+Depends: ${misc:Depends}, python
+Description: Python library that checks for available system command executables
+ It provides 2 functions:
+   GetCMD:
+     For setting local variables to the absolute path
+     of an executable.
+   Execute:
+     For executing system commands.
+ .
+ This package installs the library for Python 2.
+
+Package: python3-getcmd
+Architecture: all
+Depends: ${misc:Depends}, python3
+Description: Python library that checks for available system command executables
+ It provides 2 functions:
+   GetCMD:
+     For setting local variables to the absolute path
+     of an executable.
+   Execute:
+     For executing system commands.
+ .
+ This package installs the library for Python 3.
