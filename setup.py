@@ -43,7 +43,7 @@ class Path:
 PATH_root = os.path.dirname(os.path.realpath(__file__))
 PATH_root = Path(PATH_root, os.stat(PATH_root))
 
-FILE_cfg = os.path.join(PATH_root.Path, 'getcmd.cfg')
+FILE_cfg = os.path.join(PATH_root.Path, 'setup.cfg')
 
 list_types = ('scripts', 'py_modules', 'docs',)
 
