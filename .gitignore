@@ -1,0 +1,13 @@
+# Eclipse project files & directories
+/.settings/
+/.project
+/.pydevproject
+
+# setuptools output file & directories
+/build/
+/dist/
+/*.egg-info/
+/install.log
+
+# Compiled Python bytecode
+*.pyc
