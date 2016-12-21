@@ -11,3 +11,9 @@
 
 # Compiled Python bytecode
 *.pyc
+
+# debhelper generated files & directories
+/debian/python*-getcmd/
+/debian/*debhelper*
+/debian/files
+/debian/*substvars
